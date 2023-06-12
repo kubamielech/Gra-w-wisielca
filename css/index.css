@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inconsolata', monospace;
+	background-color: #000;
+	color: #fff;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	padding: 50px 10px;
+}
+
+.bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#plansza {
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 36px;
+	letter-spacing: 10px;
+	font-weight: bold;
+}
+
+#szubiennica {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+}
+
+#szubiennica img {
+	max-width: 90%;
+}
+
+#alfabet {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+    text-align: center;
+}
+
+.litera {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	padding: 5px;
+	width: 45px;
+	height: 45px;
+	font-size: 22px;
+	font-weight: bold;
+	border: 3px solid #fff;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: color 0.2s, border 0.2s, opacity 0.3s;
+}
+
+.litera:hover {
+	opacity: 0.7;
+}
+
+.trafiona {
+	color: rgb(0, 255, 170);
+	border: 3px solid rgb(0, 255, 170);
+	cursor: default;
+	pointer-events: none;
+}
+
+.pudlo {
+	color: tomato;
+	border: 3px solid tomato;
+	cursor: default;
+	pointer-events: none;
+}
+
+.haslo {
+    margin-top: 10px;
+    margin-bottom: 20px;
+	line-height: 25px;
+	font-size: 22px;
+}
+
+.haslo span {
+	font-weight: bold;
+}
+
+.reset {
+    color: rgb(0, 255, 170);
+	font-weight: bold;
+    font-size: 32px;
+	cursor: pointer;
+}
+
+.lose {
+    color: tomato;
+}
+
+@media (min-width: 992px) {
+	.bottom {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	#szubiennica {
+        align-items: flex-end;
+		margin: 0;
+	}
+
+	#szubiennica img {
+		max-width: 100%;
+	}
+
+	#szubiennica,
+	#alfabet {
+		width: 50%;
+		max-width: 450px;
+	}
+
+    #plansza {
+        margin-top: 150px;
+        margin-bottom: 80px;
+    }
+
+    .litera {
+        width: 50px;
+        height: 50px;
+    }
+}

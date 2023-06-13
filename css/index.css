@@ -17,7 +17,7 @@ body {
 	height: 100%;
 }
 
-h1 {
+.title {
 	margin: 10px;
 	text-align: center;
 }
@@ -56,7 +56,7 @@ h1 {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-    text-align: center;
+	text-align: center;
 }
 
 .litera {
@@ -94,8 +94,8 @@ h1 {
 }
 
 .haslo {
-    margin-top: 10px;
-    margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 	line-height: 25px;
 	font-size: 22px;
 }
@@ -105,14 +105,14 @@ h1 {
 }
 
 .reset {
-    color: rgb(0, 255, 170);
+	color: rgb(0, 255, 170);
 	font-weight: bold;
-    font-size: 32px;
+	font-size: 32px;
 	cursor: pointer;
 }
 
 .lose {
-    color: tomato;
+	color: tomato;
 }
 
 @media (min-width: 992px) {
@@ -123,7 +123,7 @@ h1 {
 	}
 
 	#szubiennica {
-        align-items: flex-end;
+		align-items: flex-end;
 		margin: 0;
 	}
 
@@ -137,18 +137,18 @@ h1 {
 		max-width: 450px;
 	}
 
-    #plansza {
-        margin-top: 120px;
-        margin-bottom: 80px;
-    }
+	#plansza {
+		margin-top: 120px;
+		margin-bottom: 80px;
+	}
 
-	h1 {
+	.title {
 		margin-top: 30px;
 	}
 
-    .litera {
-        width: 50px;
-        height: 50px;
+	.litera {
+		width: 50px;
+		height: 50px;
 		font-size: 24px;
-    }
+	}
 }

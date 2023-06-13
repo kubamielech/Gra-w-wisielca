@@ -17,8 +17,13 @@ body {
 	height: 100%;
 }
 
+h1 {
+	margin: 10px;
+	text-align: center;
+}
+
 .container {
-	padding: 50px 10px;
+	padding: 40px 10px;
 }
 
 .bottom {
@@ -60,9 +65,9 @@ body {
 	align-items: center;
 	margin: 5px;
 	padding: 5px;
-	width: 45px;
-	height: 45px;
-	font-size: 22px;
+	width: 35px;
+	height: 35px;
+	font-size: 20px;
 	font-weight: bold;
 	border: 3px solid #fff;
 	border-radius: 8px;
@@ -133,12 +138,17 @@ body {
 	}
 
     #plansza {
-        margin-top: 150px;
+        margin-top: 120px;
         margin-bottom: 80px;
     }
+
+	h1 {
+		margin-top: 30px;
+	}
 
     .litera {
         width: 50px;
         height: 50px;
+		font-size: 24px;
     }
 }

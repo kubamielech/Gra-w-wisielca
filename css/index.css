@@ -115,6 +115,15 @@ body {
 	color: tomato;
 }
 
+.time {
+	margin-top: 20px;
+	visibility: none;
+}
+
+.stopwatch {
+	display: none;
+}
+
 @media (min-width: 992px) {
 	.bottom {
 		flex-direction: row;

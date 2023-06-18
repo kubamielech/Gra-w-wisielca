@@ -150,6 +150,7 @@ const start = () => {
 	alfabet.innerHTML = tresc_diva
 
 	wypisz_haslo()
+	handleStart()
 }
 
 String.prototype.ustawZnak = function (miejsce, znak) {
@@ -184,14 +185,49 @@ const sprawdz = nr => {
 	}
 
 	if (ile_skuch == 9) {
-		alfabet.innerHTML = `<p class="haslo">PRZEGRANA. Prawidłowe hasło to: <br /> <span>${haslo}</span></p> <p class="reset lose" id="reset" onclick="location.reload()">JESZCZE RAZ</p>`
+		alfabet.innerHTML = `<p class="haslo">PRZEGRANA. Prawidłowe hasło to: <br /> <span>${haslo}</span></p> <p class="reset lose" id="reset" onclick="location.reload()">JESZCZE RAZ</p> <div class="time" id="time"></div>`
 		alfabet.style.flexDirection = 'column'
+		handleStop()
 	}
 
 	if (haslo == haslo1) {
-		alfabet.innerHTML = `<p class="haslo">WYGRANA! Podano prawidłowe hasło: <br /> <span>${haslo}</span></p> <p class="reset" id="reset" onclick="location.reload()">JESZCZE RAZ</p>`
+		alfabet.innerHTML = `<p class="haslo">WYGRANA! Podano prawidłowe hasło: <br /> <span>${haslo}</span></p> <p class="reset" id="reset" onclick="location.reload()">JESZCZE RAZ</p> <div class="time" id="time"></div>`
 		alfabet.style.flexDirection = 'column'
+		handleStop()
 	}
 }
+
+let countTime;
+let minutes = 0;
+let seconds = 0;
+
+const handleStart = () => {
+	clearInterval(countTime);
+
+	countTime = setInterval(() => {
+		if (seconds < 9) {
+			seconds++;
+			stopwatch.textContent = `${minutes}:0${seconds}`;
+		} else if (seconds >= 9 && seconds < 59) {
+			seconds++;
+			stopwatch.textContent = `${minutes}:${seconds}`;
+		} else {
+			minutes++;
+			seconds = 0;
+			stopwatch.textContent = `${minutes}:00`;
+		}
+	}, 1000);
+};
+
+const handleStop = () => {
+	time.innerHTML = `Twój czas: ${stopwatch.textContent}`;
+
+	if (stopwatch.textContent !== '0:00') {
+		time.style.visibility = 'visible';
+		// timesArr.push(stopwatch.textContent);
+	}
+
+	// clearStuff();
+};
 
 window.onload = start

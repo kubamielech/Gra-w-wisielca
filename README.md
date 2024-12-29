@@ -1,2 +1,2 @@
-# Gra-w-wisielca
-live: https://kubamielech.github.io/Gra-w-wisielca/
+# gra w wisielca
+live: https://kubamielech.github.io/gra_w_wisielca/
